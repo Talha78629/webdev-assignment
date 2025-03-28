@@ -1,0 +1,28 @@
+button {
+  transition: all 0.3s ease-in-out;
+}
+.skill-card {
+  background: white;
+  padding: 16px;
+  border-radius: 12px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+  text-align: center;
+  transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
+}
+
+.skill-card img {
+  width: 60px;
+  height: 60px;
+  margin: auto;
+}
+
+.skill-card p {
+  margin-top: 8px;
+  font-size: 14px;
+  font-weight: bold;
+}
+
+.skill-card:hover {
+  transform: scale(1.1);
+  box-shadow: 0 6px 14px rgba(0, 0, 0, 0.15);
+}

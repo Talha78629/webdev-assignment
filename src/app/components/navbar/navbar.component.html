@@ -1,0 +1,83 @@
+<nav class="bg-slate-700 text-black p-4 shadow-md fixed w-full z-10">
+  <div class="container mx-auto flex justify-between items-center">
+
+    <!-- Logo -->
+    <button routerLink="/" class="text-2xl font-bold flex items-center space-x-2 focus:outline-none">
+      <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTmyePu8oSYNSgP-2M8t9TOQTn-nmVTtwmmaw&s" alt="Logo" class="h-8">
+      <span class="text-gray-100">Portfolio</span>
+    </button>
+
+    <!-- Desktop Navigation -->
+    <div class="hidden md:flex space-x-6">
+      <button
+        (click)="navigateTo('/')"
+        [ngClass]="{'text-purple-500 font-bold': activeRoute === '/', 'text-gray-100': activeRoute !== '/'}"
+        class="hover:text-purple-500 font-medium focus:outline-none">
+        Home
+      </button>
+      <button
+        (click)="navigateTo('/about')"
+        [ngClass]="{'text-purple-500 font-bold': activeRoute === '/about', 'text-gray-100': activeRoute !== '/about'}"
+        class="hover:text-purple-500 font-medium focus:outline-none">
+        About
+      </button>
+      <button
+        (click)="navigateTo('/projects')"
+        [ngClass]="{'text-purple-500 font-bold': activeRoute === '/projects', 'text-gray-100': activeRoute !== '/projects'}"
+        class="hover:text-purple-500 font-medium focus:outline-none">
+        Projects
+      </button>
+      <button
+        (click)="navigateTo('/contact')"
+        [ngClass]="{'text-purple-500 font-bold': activeRoute === '/contact', 'text-gray-100': activeRoute !== '/contact'}"
+        class="hover:text-purple-500 font-medium focus:outline-none">
+        Contact
+      </button>
+    </div>
+
+    <button
+      (click)="navigateTo('/contact')"
+      class="hidden md:block px-4 py-2 bg-purple-600 text-white rounded-lg hover:bg-purple-700 focus:outline-none">
+      Let's Talk
+    </button>
+
+    <!-- Mobile Menu Button -->
+    <button (click)="toggleMenu()" class="md:hidden text-3xl focus:outline-none text-gray-100">
+      <span [ngClass]="isMenuOpen ? 'hidden' : 'block'">☰</span>
+      <span [ngClass]="isMenuOpen ? 'block' : 'hidden'">✖</span>
+    </button>
+  </div>
+
+  <!-- Mobile Menu -->
+  <div *ngIf="isMenuOpen" class="md:hidden bg-slate-700 text-black p-4 space-y-2 absolute top-16 left-0 w-full shadow-md transition-transform duration-300 ease-in-out">
+    <button
+      (click)="navigateTo('/')"
+      [ngClass]="{'text-purple-500 font-bold': activeRoute === '/', 'text-gray-100': activeRoute !== '/'}"
+      class="block hover:text-purple-500 focus:outline-none">
+      Home
+    </button>
+    <button
+      (click)="navigateTo('/about')"
+      [ngClass]="{'text-purple-500 font-bold': activeRoute === '/about', 'text-gray-100': activeRoute !== '/about'}"
+      class="block hover:text-purple-500 focus:outline-none">
+      About
+    </button>
+    <button
+      (click)="navigateTo('/projects')"
+      [ngClass]="{'text-purple-500 font-bold': activeRoute === '/projects', 'text-gray-100': activeRoute !== '/projects'}"
+      class="block hover:text-purple-500 focus:outline-none">
+      Projects
+    </button>
+    <button
+      (click)="navigateTo('/contact')"
+      [ngClass]="{'text-purple-500 font-bold': activeRoute === '/contact', 'text-gray-100': activeRoute !== '/contact'}"
+      class="block hover:text-purple-500 focus:outline-none">
+      Contact
+    </button>
+    <button
+      (click)="navigateTo('/contact')"
+      class="block text-center px-4 py-2 bg-purple-600 text-white rounded-lg hover:bg-purple-700 focus:outline-none">
+      Let's Talk
+    </button>
+  </div>
+</nav>
