@@ -1,4 +1,32 @@
 # Portfolio
+# 🚀 Talha Mulla - Portfolio Website
+
+This is my **personal portfolio website** showcasing my skills, projects, and experience as a **Java & Web Developer**. The website is built using **HTML, Tailwind CSS, and Angular** with smooth scrolling and interactive UI.
+
+## 🌟 Features
+
+✅ Fully responsive design  
+✅ Smooth scrolling navigation  
+✅ Downloadable **CV**  
+✅ Animated text effects  
+✅ Showcasing projects & skills  
+✅ Social media links  
+
+## 🖥️ Technologies Used
+
+- **Frontend**: HTML, Tailwind CSS, Angular  
+- **Animations**: CSS animations, JavaScript  
+- **Icons**: Font Awesome  
+- **Hosting**: GitHub Pages / Netlify  
+
+
+
+## 📥 Installation & Setup
+
+1. **Clone the repository**
+   ```sh
+   git clone https://github.com/your-username/portfolio.git
+   cd portfolio
 
 This project was generated using [Angular CLI](https://github.com/angular/angular-cli) version 19.0.6.
 
@@ -26,12 +54,12 @@ For a complete list of available schematics (such as `components`, `directives`,
 ng generate --help
 ```
 
-## Building
+## Install Dependencies
 
-To build the project run:
+
 
 ```bash
-ng build
+npm i
 ```
 
 This will compile your project and store the build artifacts in the `dist/` directory. By default, the production build optimizes your application for performance and speed.
